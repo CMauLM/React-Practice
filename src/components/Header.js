@@ -9,8 +9,9 @@ const Header = (props) => {
             <Input
                 inputHandler={props.inputHandler}
             />
-            <Button clickHandler={props.clickHandler}>
-                Add
+            <Button 
+                clickHandler={props.clickHandler}>
+                    Add
             </Button>
         </div>
     )
