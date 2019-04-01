@@ -8,6 +8,7 @@ const Header = (props) => {
             <h1>To Do List</h1>
             <Input
                 inputHandler={props.inputHandler}
+                inputValue={props.inputValue}
             />
             <Button 
                 clickHandler={props.clickHandler}>

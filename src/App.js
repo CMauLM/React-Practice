@@ -12,6 +12,7 @@ class App extends Component {
   updateTask() {
     //Update this.state.task
     console.log('OK');
+    this.state.task = this.props.value
   }
 
   addTaskToList() {
@@ -25,6 +26,7 @@ class App extends Component {
         {this.state.task}
         <Header
           inputHandler={this.updateTask}
+          inputValue={this.inputValue}
           clickHandler={this.addTaskToList}
         />
       </div>
