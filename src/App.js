@@ -2,31 +2,29 @@ import React, { Component } from 'react';
 import Header from './components/Header'
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      task: '',
-      list: []
-    }
+  state = {
+    task: "",
+    list: []
   }
-  updateTask() {
+  
+  updateTask = (e) => {
     //Update this.state.task
-    console.log('OK');
-    this.state.task = this.props.value
+    this.setState({
+      task: e.target.value
+    })
   }
 
-  addTaskToList() {
+  addTaskToList = () => {
     // Add task to this.state.list
-    console.log('Button pressed');
+    console.log(this.state.task)
   }
 
   render() {
     return (
       <div className='container'>
-        {this.state.task}
+        
         <Header
           inputHandler={this.updateTask}
-          inputValue={this.inputValue}
           clickHandler={this.addTaskToList}
         />
       </div>
